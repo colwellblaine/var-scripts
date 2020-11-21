@@ -4,6 +4,13 @@ These are various scripts which I use. They aren't exactly impressive, but they'
 
 ___
 
+### Installation
+
+To 'install' all of the scripts, run:
+```
+./install.sh
+```
+
 ##### upda
 
 This literally just updates and installs. The install script should automatically detect what package manager you use, assuming your system uses pacman, dnf, or apt. I basically don't use this personally, but sometimes it's nice to have the option to type less.
