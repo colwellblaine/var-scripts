@@ -20,6 +20,8 @@ Start by running
 ```
 This will generate a version of upda using what it thinks is the proper package manager. After this is done, move all of the files in the scripts directory somewhere in your path.
 
+___
+
 ##### upda
 
 This literally just updates and installs. The install script should automatically detect what package manager you use, assuming your system uses pacman, dnf, or apt. I basically don't use this personally, but sometimes it's nice to have the option to type less.
