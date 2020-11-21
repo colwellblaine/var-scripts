@@ -10,6 +10,15 @@ To 'install' all of the scripts, run:
 ```
 ./install.sh
 ```
+This does any work that is needed and then moves them to the specified directory.
+
+##### Manual installation
+
+Start by running
+```
+./upda-inst/initialize-upda
+```
+This will generate a version of upda using what it thinks is the proper package manager. After this is done, move all of the files in the scripts directory somewhere in your path.
 
 ##### upda
 
