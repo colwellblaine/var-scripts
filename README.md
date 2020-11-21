@@ -6,7 +6,7 @@ ___
 
 ##### upda
 
-This literally just updates and installs. The insall script should automatically detect what package manager you use, assuming your system uses pacman, dnf, or apt. I basically don't use this personally, but sometimes it's nice to have the option to type less.
+This literally just updates and installs. The install script should automatically detect what package manager you use, assuming your system uses pacman, dnf, or apt. I basically don't use this personally, but sometimes it's nice to have the option to type less.
 
 ___
 
