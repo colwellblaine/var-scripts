@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+
+#This configuration is my own, but it should help you make yours should you need it.
+
+#checks to see if you are already running graphical display
+[ ! -z "$DISPLAY" ] && printf "You already have a desktop running!\n" && exit 2
+
+#prints the menu and gets your selection. \033c clears the screen, remove that if you don't want it to do that.
+printf "\033cBlaine's Bash Desktop Launcher\n\n==============================\n\nPlease make a selection\n\n"
+printf "1)dwm\n2)Gnome\n3)xfce\n4)Terminal\n\nDefault is dwm\n\n______________________________\n\n"
+printf "> "
+read prog
+
+#this just uses awk to convert it to lowercase so that I don't have to match both upper and lower in my case statement.
+prog=`echo $prog | awk '{ print tolower($1) }'`
+
+#'sets' the default. change what prog is equal to to change the default.
+[ -z "$prog" ] && prog=1
+
+
+#This case statement starts the desktop. Most times, the command you need will follow one of the three formats outlined here.
+
+#1 is dwm. I used larbs.sh to set this up, so `startx` starts dwm by default.
+#2 is gnome. I'm not really 100% certain what the bit after gnome-session (-- :3) does, but I know it won't open correctly on my machine without it.
+#3 is xfce. Pretty straightforward.
+
+#If you need to find the command to start your desktop, check /usr/shar/xsessions, and read the file associated with the desktop you are trying to start.
+
+#4 just clears the screen and returns to the terminal
+
+case $prog in
+	1 | dwm)
+		startx
+		;;
+	2 | gnome)
+		startx /usr/bin/gnome-session -- :3 -nolisten tcp
+		;;
+	3 | xfce)
+		startxfce4
+		;;
+	4 | terminal)
+		printf "\033c"
+		exit 0
+		;;
+	*)
+		echo "No selection equal to $prog"
+		exit 1
+		;;
+esac

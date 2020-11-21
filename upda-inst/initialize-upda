@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+function in_path {
+	builtin type -P "$1" &> /dev/null
+}
+
+in_path apt && PACKMANUP="apt upgrade && sudo apt update" && PACKMANIN="apt install"
+in_path dnf && PACKMANUP="dnf upgrade" && PACKMANIN="dnf install"
+in_path pacman && PACKMANUP="pacman -Syu" && PACKMANIN="pacman -Sy"
+
+echo "#!/usr/bin/env bash
+if [[ \"\$#\" == 0 ]]
+then
+	sudo "$PACKMANUP"
+else
+	for applic in \"\$@\"
+	do
+		sudo "$PACKMANIN" \"\$applic\"
+	done
+fi" > $PWD/upda
