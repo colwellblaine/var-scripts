@@ -22,11 +22,12 @@ This will generate a version of upda using what it thinks is the proper package 
 
 ___
 
+### Descriptions of the scripts
+
 ##### upda
 
 This literally just updates and installs. The install script should automatically detect what package manager you use, assuming your system uses pacman, dnf, or apt. I basically don't use this personally, but sometimes it's nice to have the option to type less.
 
-___
 
 ##### bbdl
 
