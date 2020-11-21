@@ -6,8 +6,6 @@ upda:
 
 	An updated and streamlined version of something I've made in the past. the file 'initialize-upda' should automatically detect what package manager you are using. If it does not, you are probably using something else, in which case you could probably write this yourself.
 
-	This could definitely be done better with some awk magic, but I kinda can't be bothered figuring it out right now.
-
 ========================================================================
 
 bbdl:
