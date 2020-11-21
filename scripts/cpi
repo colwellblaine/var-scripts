@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+if [[ $# -ne 2 ]]
+then
+	printf "Improper number of arguments: $#.\ncpi accepts 2 arguments, no more, no less.\n"
+	exit 1
+fi
+
+if [ ! -f "$1" ]
+then
+	printf "File $1 does not exist."
+	exit 2
+fi
+
+if [ -d "$2" ]
+then
+	cp -r "$1" "$2"
+else
+	dir=`dirname $2`
+	mkdir -p "$dir" && cp -r "$1" "$2"
+fi

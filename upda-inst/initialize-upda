@@ -17,4 +17,4 @@ else
 	do
 		sudo "$PACKMANIN" \"\$applic\"
 	done
-fi" > $PWD/upda
+fi" > $PWD/scripts/upda
