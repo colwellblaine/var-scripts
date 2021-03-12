@@ -31,6 +31,10 @@ This literally just updates and installs. The install script should automaticall
 
 ##### bbdl
 
-Blaine's Bash Desktop Launcher. I got tired of lightdm and its issues, so I moved to tbsm. Once tbsm started having issues (would not start dwm no matter what I did) I decided to just write my own. It's for from fully featured, and adding a new desktop must be done manually, but it's faster and less frustrating than everything else.
+Blaine's Bash Desktop Launcher. I got tired of lightdm and its issues, so I moved to tbsm. Once tbsm started having issues, I decided to just write my own. It's far from fully featured, and adding a new desktop must be done manually, but it's faster and less frustrating than everything else.
 
 It's literally just a short bash script. There's a 95% chance you could write this yourself, but why should you, when I've already done it?
+
+##### .twmrc
+
+This is a config file for TWM. Why would I want to use twm? I don't know, but it's a good config.
