@@ -4,7 +4,7 @@ These are various files which I use. This may include scripts, configs, or any o
 
 ___
 
-### Descriptions of the scripts
+### Descriptions of the files
 
 ##### upda
 
