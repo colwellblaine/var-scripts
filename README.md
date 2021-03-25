@@ -6,10 +6,11 @@ ___
 
 ### Descriptions of the files
 
-##### upda
+##### setbg
 
-This literally just updates and installs. The install script should automatically detect what package manager you use, assuming your system uses pacman, dnf, or (that's an exclusive or) apt. I basically don't use this personally, but sometimes it's nice to have the option to type less.
+A rewrite of the [setbg script from LukeSmithxyz's Voidrice](https://github.com/LukeSmithxyz/voidrice/blob/master/.local/bin/setbg). There was a lot of linking and stuff that just felt like extra to me. Maybe it had a purpose, but I didn't see one. Put your background at ~/.local/share/bg. If you make a folder there and put multiple pictures inside, it will randomly choose one of them. You can obviously change this location by changing the location that bgloc sets to.
 
+I am planning to adapt the idea and some code of [foo-Wallpaper-Feh-Gif](https://github.com/thomas10-10/foo-Wallpaper-Feh-Gif) (what a name) to handle gifs as well, but this will obviously be added as a separate file in the future.
 
 ##### bbdl
 
@@ -20,3 +21,7 @@ It's literally just a short bash script. There's a 95% chance you could write th
 ##### .twmrc
 
 This is a config file for TWM. Why would I want to use twm? I don't know, it's aesthetically pleasing I guess, but it's a good config.
+
+##### upda
+
+This literally just updates and installs. The install script should automatically detect what package manager you use, assuming your system uses pacman, dnf, or (that's an exclusive or) apt. I basically don't use this personally, and in fact I am considering deleting it entirely, but sometimes it's nice to have the option to type less.
