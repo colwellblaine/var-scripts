@@ -10,7 +10,11 @@ ___
 
 A rewrite of the [setbg script from LukeSmithxyz's Voidrice](https://github.com/LukeSmithxyz/voidrice/blob/master/.local/bin/setbg). There was a lot of linking and stuff that just felt like extra to me. Maybe it had a purpose, but I didn't see one. Put your background at ~/.local/share/bg. If you make a folder there and put multiple pictures inside, it will randomly choose one of them. You can obviously change this location by changing the location that bgloc sets to.
 
-I am planning to adapt the idea and some code of [foo-Wallpaper-Feh-Gif](https://github.com/thomas10-10/foo-Wallpaper-Feh-Gif) (what a name) to handle gifs as well, but this will obviously be added as a separate file in the future.
+##### setbgif
+
+Same as above, except I used the idea from [foo-Wallpaper-Feh-Gif](https://github.com/thomas10-10/foo-Wallpaper-Feh-Gif) (what a name) to handle gifs as well. If you specify a gif, you can pass the speed that it should play at as well. 0.01 is a good speed for most gifs. For some reason, if you specify a gif and speed, the next randomly selected gif will also play at this speed.
+
+This obviously uses a bit of your cpu.
 
 ##### bbdl
 
