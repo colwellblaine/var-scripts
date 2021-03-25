@@ -12,6 +12,5 @@ case $1 in
 		;;
 	* )
 		xwallpaper --zoom "$1"
-		exit
 		;;
 esac
