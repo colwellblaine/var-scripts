@@ -1,16 +1,11 @@
 #!/bin/sh
 
-case $1 in
-	'' )
-		bgloc="$HOME/.local/share/bg"
-		case "$(file --mime-type -b "$bgloc")" in
-			image/* ) notify-send -i "$bgloc" "Changing wallpaper..." ;;
-			inode/directory ) bgloc=`find "$bgloc" -type f | shuf -n 1` && notify-send -i "$bgloc" "Random Wallpaper chosen." ;;
-			*) notify-send "Error" "Not a valid image." ; exit 1;;
-		esac
-		xwallpaper --zoom "$bgloc"
-		;;
-	* )
-		xwallpaper --zoom "$1"
-		;;
+[ -n "$1" ] && xwallpaper --zoom "$1" && notify-send -i "$1" "Setting wallpaper..."
+
+bgloc="${XDG_DATA_HOME:-$HOME/.local/share/}bg"
+case "$(file --mime-type -b "$bgloc")" in
+	image/* ) notify-send -i "$bgloc" "Changing wallpaper..." ;;
+	inode/directory ) bgloc=`find "$bgloc" -type f | shuf -n 1` && notify-send -i "$bgloc" "Random Wallpaper chosen." ;;
+	*) notify-send "Error" "Not a valid image." ; exit 1;;
 esac
+xwallpaper --zoom "$bgloc"
