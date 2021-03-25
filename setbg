@@ -7,7 +7,7 @@ case $1 in
 		trueloc="$(readlink -f "$bgloc")" &&
 		case "$(file --mime-type -b "$trueloc")" in
 			image/* ) notify-send -i "$bgloc" "Changing wallpaper..." ;;
-			inode/directory ) bgloc=`find "/home/blaine/.local/share/bg/" -type f | shuf -n 1` && notify-send -i "$bgloc" "Random Wallpaper chosen." ;;
+			inode/directory ) bgloc=`find "$bgloc" -type f | shuf -n 1` && notify-send -i "$bgloc" "Random Wallpaper chosen." ;;
 			*) notify-send "Error" "Not a valid image." ; exit 1;;
 		esac
 		xwallpaper --zoom "$bgloc"
