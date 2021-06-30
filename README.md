@@ -22,6 +22,10 @@ Blaine's Bash Desktop Launcher. I got tired of lightdm and its issues -- which, 
 
 It's literally just a short bash script. There's a 95% chance you could write this yourself, but why should you, when I've already done it?
 
+##### xmonad
+
+Literally just an xmonad config. It's based off of [DistroTube's config](https://gitlab.com/dwt1/dotfiles/-/tree/master/.xmonad), as well as [his xmobar config](https://gitlab.com/dwt1/dotfiles/-/tree/master/.config/xmobar), but modified in ways that make more sense. Most of this is just rebinds and takin out the emacs stuff. As I am running on a laptop, I have a battery percentage set up. I just used [Luke Smith's sb-battery script](https://github.com/LukeSmithxyz/voidrice/blob/master/.local/bin/statusbar/sb-battery) to do this, so you'll have to comment that out if you don't have it.
+
 ##### .twmrc
 
 This is a config file for TWM. Why would I want to use twm? I don't know, it's aesthetically pleasing I guess, but it's a good config.
